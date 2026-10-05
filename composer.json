@@ -1,0 +1,47 @@
+{
+    "name": "tyhpdef/twilio-sdk-impl",
+    "description": "Implementation package for tyhpdef/twilio-sdk. Require tyhpdef/twilio-sdk, not this package.",
+    "keywords": [
+        "dev",
+        "static analysis",
+        "internal"
+    ],
+    "type": "library",
+    "license": "Apache-2.0",
+    "version": "8.12.1.0",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "tyhp": {
+            "interopContractVersion": 1,
+            "php-version": ">=8.2",
+            "require": {
+                "tyhpdef/php": "@dev",
+                "tyhpdef/guzzlehttp-guzzle": "@dev",
+                "tyhpdef/guzzlehttp-psr7": "@dev",
+                "tyhpdef/guzzlehttp-promises": "@dev"
+            },
+            "package": {
+                "include": [
+                    "./_tyhpdef/*.tyhpdef",
+                    "./_tyhpdef/extensions/*.tyhpdef"
+                ],
+                "overlay": [
+                    "./_tyhpdef/overlays/stubs/*.tyhpdef",
+                    "./_tyhpdef/overlays/*.tyhpdef"
+                ]
+            },
+            "public": "tyhpdef/twilio-sdk"
+        }
+    },
+    "require": {
+        "php": ">=8.2",
+        "twilio/sdk": "8.12.1"
+    },
+    "require-dev": {
+        "tyhpdef/php": "@dev",
+        "tyhpdef/guzzlehttp-guzzle": "@dev",
+        "tyhpdef/guzzlehttp-psr7": "@dev",
+        "tyhpdef/guzzlehttp-promises": "@dev"
+    }
+}
